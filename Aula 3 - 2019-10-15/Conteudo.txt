@@ -1,0 +1,34 @@
+1. Java Básico:
+	Método: um bloco de código.
+
+	Cada método possui seu próprio escopo, isto é, seu próprio contexto.
+
+	Isso significa que as variáveis que existem dentro de um método SÓ EXISTEM naquele método.
+
+	Vimos que o método PRINCIPAL de um programa Java é o método main: todo programa SE INICIA pelo método main e FINALIZA quando o método main termina sua execução.
+
+	O processador começa o programa executando o método main e vai executando linha por linha do bloco de código do método main.
+
+	Ao chegar no fim do bloco de código (ou seja, depois de executar a última linha do método main) o programa TERMINA.
+
+	Transferência de controle:
+
+		A transferência de controle acontece quando chamamos um método.
+		Ou seja, o programa é iniciado com o CONTROLE DE EXECUÇÃO na main (pois é o método principal).
+		Quando um outro método é chamado na main, ocorre uma transferência do controle de execução: o processador PÁRA de executar o bloco de código da main e MUDA de escopo (começa a executar um OUTRO BLOCO DE CÓDIGO).
+		Nesse novo escopo, as variáveis são diferentes, de tal forma que NÃO É POSSÍVEL acessar as variáveis criadas na main.
+		A recíproca é verdadeira: a main também não consegue acessar as variáveis criadas em outros métodos (pois os escopos são diferentes; cada método - cada bloco de código - possui seu próprio escopo).
+
+	Passagem de Parâmetros:
+
+		É possível transferir VALORES de um escopo para outro.
+		A transferência desses VALORES é chamada de "Passagem de Parâmetros".
+		Na hora em que ocorre uma transferência de CONTROLE DE EXECUÇÃO, é possível transferir também VALORES.
+		É dessa forma que um método consegue acessar valores de OUTRO método.
+		Por exemplo, quando a main chama um outro método e TRANSFERE um parâmetro, esse outro método é capaz de acessar esse valor que, inicialmente, era acessado apenas pela main.
+
+	Valor de retorno:
+
+		Quando um método FINALIZA sua execução (ou seja, quando termina de executar todas as linhas do seu bloco de código), ocorre o RETORNO AO MÉTODO que o chamou.
+		Por exemplo, quando a main chama um método, esse método executa todo seu bloco de código e depois RETORNA para a main.
+		Ao retornar para a main, é possível TRANSFERIR um valor de retorno. Dessa forma, a main se torna capaz de acessar valores que, inicialmente, eram acessados APENAS PELO OUTRO MÉTODO (lembrando, cada método possui um escopo e, por padrão, não é possível acessar as variáveis de outros métodos)

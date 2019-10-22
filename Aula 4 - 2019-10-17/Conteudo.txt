@@ -1,0 +1,34 @@
+1. Entrada de dados:
+Para pedir dados pro usuário, utiliza-se a classe Scanner.
+
+	Scanner scanner = new Scanner(System.in);
+	int entrada = scanner.nextInt();
+
+A execução do programa trava na hora em que executa-se o comando "scanner.nextInt()" e o programa fica aguardando o usuário digitar algum valor.
+
+Quando o usuário digita, o programa volta sua execução e armazena o valor que o usuário digitou na variável.
+
+Atividade: modificar o programa para pedir os números para o usuário e utilizar esses números nos métodos soma, subtracao, multiplicação e divisão.
+
+2. Classes:
+Uma classe define um escopo, no qual pode-se colocar variáveis e métodos.
+
+Portanto, as classes podem ter variáveis de classe e métodos de classe.
+
+Os métodos de classe fazer parte do mesmo escopo das variáveis de classe (pois tanto os métodos como as variáveis estão dentro da classe)
+
+3. Static:
+O modificador static diz para o programa instanciar as variáveis e métodos que são static na memória RAM ANTES de começar a execução do programa.
+
+Para acessar uma variável static de OUTRA classe, basta escrever o nome da classe antes e depois o nome da variável que se quer acessar.
+
+Exemplo: acessar a variável nome da classe Usuario:
+
+	Usuario.nome;
+
+Para acessar um método static de OUTRA classe, o procedimento é o mesmo.
+
+Exemplo: acessar o método pedirNome() da classe Usuario:
+
+	Usuario.pedirNome();
+

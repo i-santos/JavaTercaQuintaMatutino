@@ -1,0 +1,28 @@
+DESAFIO
+
+Criar um projeto (nome: DesafioAula5)
+
+Objetivo: fazer uma calculadora simples
+
+1. Criar uma classe Calculadora
+2. Definir os métodos soma, subtracao, multiplicacao e divisao
+3. Pedir para o usuário digitar 2 valores inteiros e armazenar esses valores na variáveis x e y (na main)
+4. Pedir para o usuário digitar a operação que ele deseja realizar (+, -, * ou /)
+5. Usar a classe Calculadora para realizar a operação e mostrar o resultado na tela
+	
+DICA:
+
+para comparar uma String com outra, o código é assim:
+
+	String string1 = "+";
+	
+	if (string1.equals("+")) {
+
+	} else if (string1.equals("-")) {
+	
+	}
+
+
+
+
+

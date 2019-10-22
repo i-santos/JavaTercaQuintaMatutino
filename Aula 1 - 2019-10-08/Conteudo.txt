@@ -1,0 +1,15 @@
+ATIVIDADE 1:
+	* Criar um projeto Java Web -> Aplicação Web no Netbeans
+	* Verificar se o NetBeans criou automaticamente o arquivo index.JSP ou index.HTML. Caso tenha sido index.JSP, excluir o arquivo e criar um index.html dentro da pasta Páginas Web.
+	* [No index.html]: criar dois links: um para a página login.html e outro para a página cadastro.html
+	* Criar os arquivos login.html e cadastro.html dentro da pasta Páginas Web
+	* [No login.html]: criar um formulário de login, pedindo email e senha do usuário
+	* [No cadastro.html]: criar um formulário de cadastro, pedindo email e senha do usuário
+
+------------------------------------------
+1. Modelo Cliente-Servidor: request e response
+2. Protocolo de comunicação de rede HTTP: as requisições são feitas utilizando as regras de comunicação do protocolo HTTP
+3. Tomcat (software de servidor): roda na porta 8080; recebe as requisições e envia as respostas de volta
+4. Tags <a> e <form> do HTML: geram requisições ao servidor
+5. Tag <input>: espaço para usuário inserir dados
+6. Conhecendo o NetBeans: criação de projeto e criação de arquivos

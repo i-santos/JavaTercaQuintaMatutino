@@ -1,0 +1,40 @@
+1. Servlet: criando familiaridade
+
+	Com a Servlet, é possível captar os dados que o usuário enviou no request.
+
+	Servlet = "Servidor" + "inho" = "Servidorzinho"
+
+	A Servlet é um pedaço de código que recebe requests e processa.
+	Depois de processar, a Servlet envia uma resposta de volta ao cliente.
+
+2. Java Básico:
+	Variável: reserva um espaço na memória RAM e dá um nome identificador para esse espaço.
+
+	Para criar uma variável:
+		
+		int x;
+
+	O "int" é referente ao TIPO de variável, ou seja, o tipo do valor que será armazenado no espaço de memória.
+
+	O "x" é o NOME que é dado ao espaço de memória reservado.
+
+	Há vários tipos de variáveis: int, float, double, String, boolean.
+
+	Para todos os tipos, o processo de criação de variável é igual:
+
+		int a;
+		float b;
+		double c;
+		String d;
+		boolean e;
+
+	O conceito é o mesmo: sempre reserva-se um espaço na memória e é dado a esse espaço de memória um nome identificador.
+
+	As variáveis servem para colocar-se valores dentro do espaço de memória identificado pela variável:
+
+		int a;
+
+		a = 10;
+
+	O código acima reserva um espaço na memória (espaço suficiente para caber um valor inteiro) e depois ATRIBUI o valor 10 a esse espaço de memória.
+	Em outras palavras, estamos guardando o valor 10 dentro do espaço de memória chamado "a".
