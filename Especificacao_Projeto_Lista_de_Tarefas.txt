@@ -1,0 +1,63 @@
+Desafio: fazer uma Lista de Tarefas como projeto
+
+1. Cadastro: o projeto deverá permitir o cadastro de um novo usuário
+2. Login: o usuário cadastro poderá efetuar o login no sistema
+3. Ao fazer o login, ao usuário será apresentada a lista de tarefas que ele possui.
+4. No início, obviamente, essa lista estará vazia
+5. Adicionar Tarefa: o projeto deverá permitir ao usuário adicionar uma nova tarefa à lista
+6. Marcar como finalizada: o projeto deverá disponibilizar um botão de finalizar tarefa.
+7. Excluir tarefa: o projeto deverá disponibilizar uma maneira de excluir uma tarefa.
+
+-------
+
+O que precisa:
+
+1. Front-end: escolher entre uma das opções abaixo para o software cliente.
+	1.1. O front-end pode ser feito utilizando a linha de comando. Nessa opção, o projeto será um Java Padrão.
+	1.2. o front-end pode ser feito utilizando HTML. Nessa opção, o projeto será um Java Web
+
+2. Back-end: Servlets.
+	2.1. Desenvolver Servlets que irão receber requisições do software cliente.
+	2.2. As Servlets serão responsáveis por realizar as funcionalidades do projeto: cadastrar usuário, login, adicionar tarefa, marcar tarefa como finalizada, excluir tarefa.
+	2.3. As Servlets receberão requisições do programa cliente e devolverão uma resposta. Note que se o software cliente for um navegador, as Servlets podem gerar uma resposta em formato HTML. Se o software cliente NÃO for um navegador (se for um Java padrão), as Servlets vão devolver apenas os dados como resposta.
+
+3. Back-end: Banco de Dados MySQL
+	2.1. Criar uma base de dados para o projeto (dar o nome de db_lista)
+	2.2. Criar uma tabela 'usuario', com as colunas:
+		- id: int, PRIMARY KEY, NOT NULL, AUTO INCREMENT
+		- email: varchar(128) NOT NULL
+		- senha: varchar(128) NOT NULL
+	2.3. Criar uma tabela 'tarefa', com as colunas:
+		- id: int, PRIMARY KEY, NOT NULL, AUTO INCREMENT
+		- titulo: varchar(128) NOT NULL
+		- finalizada: bit(1) NOT NULL,
+		- id_usuario: INT, FOREIGN KEY
+
+4. Para desenvolver o projeto, o conhecimento de ArrayList é essencial.
+
+----
+
+ PASSO A PASSO
+
+1. Criar uma Classe Usuario: essa classe terá id, email e senha como variáveis de classe
+2. Criar uma Classe Tarefa: essa classe terá id, titulo, finalizada e id_usuario como variáveis de classe
+3. Criar uma Servlet para receber novos Cadastros: a CadastroServlet. Essa Servlet deve resolver os pedidos de cadastro.
+4. Criar uma Servlet para fazer o login: a LoginServlet. Essa Servlet irá autenticar o usuário e criar uma nova sessão para o usuário.
+5. Criar uma Servlet para lidar com as tarefas: a TarefaServlet. Essa Servlet irá adicionar, finalizar e excluir tarefas.
+6. Criar uma Classe UsuarioDAO: essa classe fará a conexão com o Banco de Dados para cadastrar e verificar o login dos usuários.
+7. Criar uma Classe TarefaDAO: essa classe fará a conexão com o Bando de Dados para adicionar, buscar, alterar e excluir tarefas.
+8. Criar uma base de dados no MySQL (ou qualquer outro banco de dados de preferência): 
+	8.1. Nome da base de dados: lista_de_tarefas (ou qualquer outro de preferência)
+	8.2. Tabela usuario, com as colunas: 
+		- id (int, chave primária, not null, auto increment)
+		- email (varchar(128), not null)
+		- senha (varchar(128), not null)
+	8.3. Tabela tarefa, com as colunas:
+		- id (int, chave primária, not null, auto increment)
+		- titulo (varchar(255), not null)
+		- finalizada (bit, not null)
+		- id_usuario (chave estrangeira)
+
+
+
+
