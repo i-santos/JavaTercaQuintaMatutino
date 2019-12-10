@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import dao.UsuarioDAO;
@@ -15,49 +10,37 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Usuario;
 
-/**
- *
- * @author Professor
- */
-@WebServlet(name = "CadastrarServlet", urlPatterns = {"/CadastrarServlet"})
-public class CadastrarServlet extends HttpServlet {
-
+@WebServlet(name="ProcurarServlet", urlPatterns={"/ProcurarServlet"})
+public class ProcurarServlet extends HttpServlet { 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         
-    }
+    } 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         
         String email = request.getParameter("email");
-        String senha = request.getParameter("senha");
         
-        Usuario u = new Usuario();
-        u.setEmail(email);
-        u.setSenha(senha);
+        Usuario u = UsuarioDAO.procurarUsuarioPorEmail(email);
         
-        boolean cadastrado = UsuarioDAO.inserirUsuario(u);
-        
-        if (cadastrado) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroSucesso.jsp");
+        if (u == null) {
+            request.setAttribute("erro", "E-mail não cadastrado.");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("procura.jsp");
             dispatcher.forward(request, response);
         } else {
-            request.setAttribute("erro", "Algo deu errado. Tente novamente");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastro.jsp");
+            request.setAttribute("usuario", u);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("perfil.jsp");
             dispatcher.forward(request, response);
         }
         
-        
-        
     }
 
-    /**
+    /** 
      * Returns a short description of the servlet.
-     *
      * @return a String containing servlet description
      */
     @Override
