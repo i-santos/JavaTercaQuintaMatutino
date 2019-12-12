@@ -16,7 +16,7 @@
                 <root id="src.dir" name="Pacotes de Códigos-fonte"/>
             </source-roots>
             <test-roots>
-                <root id="test.src.dir" name="Pacotes de Teste"/>
+                <root id="test.test.dir" name="Pacotes de Teste"/>
             </test-roots>
         </data>
     </configuration>

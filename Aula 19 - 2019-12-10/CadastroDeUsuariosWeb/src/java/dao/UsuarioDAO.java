@@ -1,4 +1,4 @@
-package dao;
+ ,package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,10 +12,10 @@ public class UsuarioDAO {
     public static boolean inserirUsuario(Usuario u) {
         boolean sucesso = false;
 
-        // Tentar abrir conexão
+        // Tentar abrir conexÃ£o
         try (Connection conn = Conexao.abrirConexao()) {
 
-            // Começar a preparar o comando para enviar pro Banco
+            // ComeÃ§ar a preparar o comando para enviar pro Banco
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO lista_tarefas.usuario (email, senha) VALUES (?, ?)");
 
             // Substituir os valores no comando
