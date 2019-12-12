@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/web/remove.jsp</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/web/index.jsp</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/src/java/controller/ProcurarServlet.java</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/src/java/controller/RemoverServlet.java</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/src/java/dao/UsuarioDAO.java</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/web/perfil.jsp</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/src/java/controller/AlterarServlet.java</file>
-            <file>file:/Z:/Professor%20Igor%20Santos/JavaTercaQuintaMatutino/Aula%2019%20-%202019-12-10/CadastroDeUsuariosWeb/web/procura.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
