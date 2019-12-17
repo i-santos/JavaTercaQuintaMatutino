@@ -136,7 +136,7 @@ public class CadastroDeUsuarios {
             DriverManager.registerDriver(driver);
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "");
-            PreparedStatement stmt = connection.prepareStatement("INSERT INTO lista_tarefas.usuario (email, senha) VALUES (?, ?)");
+            PreparedStatement stmt = connection.prepareStatement("INSERT INTO cadastro_usuarios.usuario (email, senha) VALUES (?, ?)");
             stmt.setString(1, u.getEmail());
             stmt.setString(2, u.getSenha());
 
@@ -161,7 +161,7 @@ public class CadastroDeUsuarios {
             DriverManager.registerDriver(driver);
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "");
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM lista_tarefas.usuario WHERE email = ?");
+            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM cadastro_usuarios.usuario WHERE email = ?");
 
             stmt.setString(1, email);
 
@@ -191,7 +191,7 @@ public class CadastroDeUsuarios {
             DriverManager.registerDriver(driver);
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "");
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM lista_tarefas.usuario");
+            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM cadastro_usuarios.usuario");
 
             ResultSet rs = stmt.executeQuery();
 
@@ -222,7 +222,7 @@ public class CadastroDeUsuarios {
             DriverManager.registerDriver(driver);
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "");
-            PreparedStatement stmt = connection.prepareStatement("DELETE FROM lista_tarefas.usuario WHERE id = ?");
+            PreparedStatement stmt = connection.prepareStatement("DELETE FROM cadastro_usuarios.usuario WHERE id = ?");
 
             stmt.setInt(1, u.getId());
 
