@@ -2,7 +2,6 @@ package controller;
 
 import dao.UsuarioDAO;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,22 +26,20 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
 
-        Usuario u = UsuarioDAO.procurarUsuario(email, senha);
+        Usuario u = UsuarioDAO.buscarPorEmailSenha(email, senha);
 
-        if (u != null) {
-            // Fez login com sucesso!
-            HttpSession session = request.getSession();
-
-            session.setAttribute("usuario", u);
-
-            response.sendRedirect("HomeServlet");
-
-        } else {
-
-            request.setAttribute("erro", "Email/senha inválidos. Tente novamente");
+        if (u == null) {
+            request.setAttribute("erro", "Email/senha inválidos");
             request.getRequestDispatcher("index.jsp").forward(request, response);
-
+        } else {
+            
+            HttpSession session = request.getSession();
+            
+            session.setAttribute("usuario", u);
+            
+            response.sendRedirect("HomeServlet");
         }
+
     }
 
     /**
